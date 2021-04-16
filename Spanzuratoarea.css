@@ -1,0 +1,13 @@
+h2 {
+	color: grey;
+}
+
+#output {
+	font-size: 30px;
+	letter-spacing: 3px;
+}
+
+#list {
+	font-size: 20px;
+	text-align: left;
+}
