@@ -22,9 +22,9 @@
          <form>
           <div class="mb-3">
             <label class="form-label">Add a word</label>
-            <input type="text" class="form-control" id="wordAdded">
+            <input type="text" class="form-control" id="inputWord">
           </div>
-          <button type="button" class="btn btn-primary" onclick="addWord($('#wordAdded').val());">Add</button>
+          <button type="button" class="btn btn-primary" onclick="addWord();">Add</button>
          </form>
         </div><br>
         <p id="output"></p>
@@ -34,7 +34,7 @@
               <label class="form-label">Add a character to check if is in word</label>
               <input type="text" class="form-control" id="letter">
             </div>
-            <button type="button" class="btn btn-primary" onclick="check($('#letter').val(), $('#wordAdded').val());">Check</button>
+            <button type="button" class="btn btn-primary" onclick="searchWordForLetter($('#letter').val());clearInputLetter();">Check</button>
           </form><br>
           <p id="list">Wrong letters tried:</p>
         </div>
