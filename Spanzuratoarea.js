@@ -12,6 +12,7 @@ function addWord() {
   }
   document.getElementById("output").innerHTML = aux_word.toUpperCase();
   document.getElementById("list").innerHTML = "Wrong letters tried:";
+  document.getElementById("message").innerHTML = "";
   checks_left = 10;
   $('#inputWord').val("");
 }
@@ -28,13 +29,13 @@ function searchWordForLetter(letter) {
   } 
   if (foundLetter == 0) {
     --checks_left;
-    console.log("You have " + checks_left + " attempts remaining");
+    document.getElementById("message").innerHTML = ("You have " + checks_left + " attempts remaining");
     $('#list').append(letter + ",");
   }
   if (checks_left == 0) {
-    console.log("You Lost, add another word and try again! :)");;
+    document.getElementById("message").innerHTML = ("You Lost, add another word and try again! :)");;
   } else if (word.toUpperCase().localeCompare(aux_word.toUpperCase()) == 0) {
-    console.log("You won, Congratulations!!!");  
+    document.getElementById("message").innerHTML = ("You won, Congratulations!!!");  
   }
   document.getElementById('output').innerHTML = aux_word.toUpperCase();
 }
