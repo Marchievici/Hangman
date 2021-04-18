@@ -11,3 +11,9 @@ h2 {
 	font-size: 20px;
 	text-align: left;
 }
+
+#message {
+	font-size: 20px;
+	text-align: center;
+	color: red;
+}
